@@ -1,0 +1,10 @@
+<ul class="bg-gray-500">
+  @for(genero of apiResponse().genres; track genero.id){
+  <li class="grid grid-cols-1">
+    <h2 class="col-span-1 font-bold text-center text-3xl my-15">{{genero.name}}</h2>
+    <ul class="col-span-1 mb-30">
+      <app-carousel [inputResultMovie]="genero.movies.results"/>
+    </ul>
+  </li>
+  }
+</ul>

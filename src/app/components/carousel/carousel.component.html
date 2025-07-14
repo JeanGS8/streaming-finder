@@ -1,0 +1,7 @@
+<swiper-container #swiperContainer init="false">
+  @for (movie of results(); track movie.id) {
+  <swiper-slide>
+    <img [src]="'https://image.tmdb.org/t/p/w500/' + movie?.poster_path" [alt]="movie.title" class="mx-auto max-w-3xs"/>
+  </swiper-slide>
+  }
+</swiper-container>

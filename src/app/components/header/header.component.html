@@ -1,0 +1,47 @@
+<header class="bg-gray-700 py-5 flex justify-between px-5 flex-row-reverse md:flex-row">
+  <h1 class="mt-1 md:mt-0">Streaming Finder</h1>
+
+  <nav>
+    <button class="md:hidden text-2xl my-auto" (click)="toggleMenu()">
+      {{ menuOpen ? '✕' : '☰' }}
+    </button>
+
+    <ul class="hidden md:flex gap-4">
+      <li>
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="col-span-2 col-start-2">
+          Em alta
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="col-span-2">
+          Lançamentos
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="col-span-2">
+          Recomendados
+        </a>
+      </li>
+    </ul>
+
+    @if (menuOpen) {
+    <ul class="md:hidden bg-gray-700 p-4">
+      <li>
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="col-span-2 col-start-2">
+          Em alta
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="col-span-2">
+          Lançamentos
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="col-span-2">
+          Recomendados
+        </a>
+      </li>
+    </ul>
+    }
+  </nav>
+</header>
